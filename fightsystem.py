@@ -1,16 +1,6 @@
 from random import randint
 import time
 
-class gnom:
-    name = "gnom"
-    hp = 100
-    atak = 10
-
-class mag:
-    name = "mag"
-    hp = 30
-    atak = 50
-
 def status(self):
     print("%s HP: %d ATAK: %d" %(self.name, self.hp, self.atak))
 
@@ -42,7 +32,7 @@ def walka(glad1, glad2):
 
         def start(glad1,glad2):
 
-            def punch(glad1, glad2): 
+            def punch(glad1, glad2):
                 glad1.atak = randint(glad1.atak-10, glad1.atak+10) 
                 glad2.hp -= glad1.atak  
                 status(glad1)
@@ -61,19 +51,3 @@ def walka(glad1, glad2):
                 time.sleep(1)
 
         los(glad1, glad2)
-        
-
-merino = gnom()
-merino.name = "Merino"
-status(merino)
-
-doritos = gnom()
-doritos.name = "Doritos"
-status(doritos)
-
-merlin = mag()
-merlin.name = "Merlin"
-status(merlin)
-
-walka(merino, doritos)
-walka(merino, merlin)
